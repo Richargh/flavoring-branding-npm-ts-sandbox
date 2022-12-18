@@ -1,0 +1,37 @@
+= Flavoring and Branding in TypeScript (Sandbox)
+
+This is a code example of flexible nominal typing in typescript link:https://spin.atomicobject.com/2018/01/15/typescript-flexible-nominal-typing/[as shown by Atomic Object].
+
+
+== Features
+
+* **Flavoring**: flexible nominal types
+* **Branding**: strict nominal types
+* link:https://mochajs.org/[Mocha] + link:https://earljs.dev/[EarlJs Assertions]
+
+== Preconditions
+
+* Node 18
+** Use [nvm](https://github.com/nvm-sh/nvm) to `nvm use 18`
+* Install packages `npm ci`
+
+== Usage
+
+* Run tests `npm run test`
+
+== Created via
+
+* `node --version > .nvmrc`
+. `npm init -y`
+.. link:https://docs.npmjs.com/cli/v9/configuring-npm/package-json#private[configure npm] by setting `"private": true` and engines to same node version as in the link:.nvmrc[nvmrc]
+. `npm i -D typescript @types/node ts-node`
+. `npx tsc --init` and configure `outdir: "dist"`, `"target": "es2017"` and other things by preference
+.. Add `"build": "tsc"` to link:package.json[package.json].
+. Add `npm install -D mocha @types/mocha earljs`
+.. Add  "build": "mocha"` to package.json
+.. Add `.mocharc.json` containing `"require": ["ts-node/register"], "spec": ["test/**/*.spec.ts"]`
+.. Add `"types": ["mocha"]` to tsconfig.json
+.. Wrap link:https://earljs.dev/docs/[EarlJs Getting Started example] in a mocha `test/foo.spec.ts` file
+
+
+// TODO: absolute src and tst imports
