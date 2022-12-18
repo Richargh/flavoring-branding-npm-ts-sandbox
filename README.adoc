@@ -1,7 +1,6 @@
 = Flavoring and Branding in TypeScript (Sandbox)
 
-This is a code example of flexible nominal typing in typescript link:https://spin.atomicobject.com/2018/01/15/typescript-flexible-nominal-typing/[as shown by Atomic Object].
-
+This is a code example of flexible nominal typing in typescript link:https://spin.atomicobject.com/2018/01/15/typescript-flexible-nominal-typing/[as shown by Atomic Object] and also contains their link:https://spin.atomicobject.com/2017/06/19/strongly-typed-date-string-typescript/[Strongly-Typed Date String].
 
 == Features
 
@@ -32,6 +31,3 @@ This is a code example of flexible nominal typing in typescript link:https://spi
 .. Add `.mocharc.json` containing `"require": ["ts-node/register"], "spec": ["test/**/*.spec.ts"]`
 .. Add `"types": ["mocha"]` to tsconfig.json
 .. Wrap link:https://earljs.dev/docs/[EarlJs Getting Started example] in a mocha `test/foo.spec.ts` file
-
-
-// TODO: absolute src and tst imports
